@@ -189,11 +189,6 @@ public class startApp extends CordovaPlugin {
 						} catch (JSONException e) {
 			
 		}
-		try {
-						LaunchIntent.removeExtra(key);
-						} catch (JSONException e) {
-			
-		}
 						LaunchIntent.putExtra(parseExtraName(key), value);
 					}
 				}
