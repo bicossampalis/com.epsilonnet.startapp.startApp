@@ -189,15 +189,9 @@ public class startApp extends CordovaPlugin {
 						try {
 						LaunchIntent.removeExtra(parseExtraName(key));
 						} 
-					catch (JSONException e) {
-			key2 = "3";
-		}
-		catch (IllegalAccessException e) {
-				key2 = "3";
-		}
-		catch (NoSuchFieldException e) {
-				key2 = "3";
-		}
+					
+	
+		
 		catch (ActivityNotFoundException e) {
 			key2 = "3";
 		}
