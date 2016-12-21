@@ -67,6 +67,7 @@ public class startApp extends CordovaPlugin {
 		JSONObject extra;
 		JSONObject key_value;
 		String key;
+		String key2;
 		String value;
 		
 		int i;
@@ -185,7 +186,13 @@ public class startApp extends CordovaPlugin {
 						
 						value = extra.getString(key);
 
-						
+						try {
+						LaunchIntent.removeExtra(parseExtraName(key));
+						} catch (IndexOutOfBoundsException e) {
+   							key2 = "3";
+						} catch (IOException e) {
+ 							key2 = "3";
+						}
 						LaunchIntent.putExtra(parseExtraName(key), value);
 					}
 				}
