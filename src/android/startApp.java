@@ -185,7 +185,6 @@ public class startApp extends CordovaPlugin {
 						
 						value = extra.getString(key);
 
-						LaunchIntent.removeExtra(parseExtraName(key));
 						
 						LaunchIntent.putExtra(parseExtraName(key), value);
 					}
