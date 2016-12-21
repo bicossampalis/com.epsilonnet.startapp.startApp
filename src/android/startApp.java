@@ -308,8 +308,6 @@ public class startApp extends CordovaPlugin {
 				
 				if (extraValue == null) {
 					extraValue = ((Uri) extraIntent.getParcelableExtra(extraName)).toString();
-				}else{
-					extraIntent.removeExtra(extraName);
 				}
 
 				callback.success(extraValue);
