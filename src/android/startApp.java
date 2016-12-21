@@ -187,9 +187,11 @@ public class startApp extends CordovaPlugin {
 						value = extra.getString(key);
 						try {
 						LaunchIntent.removeExtra(parseExtraName(key));
-						} catch (JSONException e) {
-			key2 = "3";
-		}
+						} catch (IndexOutOfBoundsException e) {
+   							key2 = "3";
+						} catch (IOException e) {
+ 							key2 = "3";
+						}
 						LaunchIntent.putExtra(parseExtraName(key), value);
 					}
 				}
